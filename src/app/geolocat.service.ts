@@ -20,10 +20,10 @@ export class GeolocatService {
 
   async iniciarSeguimiento() {
     if (this.platform.is('desktop')) {
-      console.log('Estamos en una PC');
+      console.log('PC');
 
     } else if (this.platform.is('mobile')) {
-      console.log('Estamos en un dispositivo móvil');
+      console.log('Celular');
       this.verPermisos = await Geolocation.checkPermissions();
       console.log('Geolocation.checkPermissions()', this.verPermisos);
       this.permisos = await Geolocation.requestPermissions();
